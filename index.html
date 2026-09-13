@@ -359,7 +359,7 @@
       '#ffa62d',
       '#ff36ff'
     ],
-    // probably should be true, but back-compat
+    // probably should be true but back-compat
     disableForReducedMotion: false,
     scalar: 1
   };
@@ -712,7 +712,7 @@
         );
       }
 
-      // if we have a previous canvas already animating,
+      // if we have a previous canvas already animating
       // add to it
       if (animationObj) {
         return animationObj.addFettis(fettis);
@@ -764,7 +764,7 @@
 
       function onResize() {
         if (worker) {
-          // TODO this really shouldn't be immediate, because it is expensive
+          // TODO this really shouldnt be immediate because it is expensive
           var obj = {
             getBoundingClientRect: function () {
               if (!isLibCanvas) {
@@ -784,7 +784,7 @@
           return;
         }
 
-        // don't actually query the size here, since this
+        // dont actually query the size here since this
         // can execute frequently and rapidly
         size.width = size.height = null;
       }
@@ -878,7 +878,7 @@
     var tempCtx = tempCanvas.getContext('2d');
 
     if (!matrix) {
-      // attempt to figure out the width of the path, up to 1000x1000
+      // attempt to figure out the width of the path up to 1000x1000
       var maxSize = 1000;
       var minX = maxSize;
       var minY = maxSize;
@@ -1004,7 +1004,7 @@
   let ready = false;
 
   // Matches the subtexts own CSS timing (1.8s delay + 1s fade duration)
-  // so taps can't fire confetti before the "tap anywhere" line has appeared.
+  // so taps cant fire confetti before the "tap anywhere" line has appeared
   setTimeout(() => { ready = true; }, 2800);
 
   const warmPalette = ['#F4E4C1', '#B87333', '#D88C9A', '#3B2412', '#EFC989'];
